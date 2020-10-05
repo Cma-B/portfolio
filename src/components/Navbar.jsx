@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Menu, Segment } from "semantic-ui-react";
+import Portfolio from "./Portfolio"
 
 const Navbar = () => {
   const [activeItem, setActiveItem] = useState("portfolio", "about");
   const handleItemClick = (e, { name }) => {
     setActiveItem(name);
+    
   };
   return (
     <Segment inverted>
@@ -15,6 +17,7 @@ const Navbar = () => {
           onClick={handleItemClick}
           data-cy="portfolio"
         />
+       
           <Menu.Item
           name="about"
           active={activeItem === "about"}
